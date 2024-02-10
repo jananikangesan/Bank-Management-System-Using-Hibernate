@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+    
+   	<class name="Customer" table='"cbc_customer_table"'>
+		<id name="customerId" column="account_number" type="integer" />
+		<property name="customerName" column="customer_name" type="string" />
+		<property name="customerNumber" column="contact_number" type="long" />
+		<property name="customerUsername" column="username" type="string" />
+		<property name="customerBalance" column="balance" type="float" />
+		<property name="customerPassword" column="password" type="string" />
+		
+	</class>
+</hibernate-mapping>
+<hibernate-configuration>
+    <session-factory>
+        <!-- Other configurations -->
+
+        <property name="hibernate.dialect">org.hibernate.dialect.Oracle10gDialect</property>
+    </session-factory>
+</hibernate-configuration>
